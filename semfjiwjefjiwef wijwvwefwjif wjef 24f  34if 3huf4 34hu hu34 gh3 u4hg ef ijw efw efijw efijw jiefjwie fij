@@ -2925,7 +2925,7 @@ trol:AddButton({
 })
 
 local Section = trol:AddSection({
-	Name = "View Player"
+	Name = "Camera Function"
 })
 
 trol:AddToggle({
@@ -2936,12 +2936,11 @@ trol:AddToggle({
 		while viewplr == true do
 					game.workspace:FindFirstChild("Camera").CameraSubject = selected.Character
 					game.workspace:FindFirstChild("Camera").CameraType = "Custom"
-			task.wait()
 			if viewplr == false then
 				game.workspace:FindFirstChild("Camera").CameraSubject = game.Players.LocalPlayer.Character
-				game.workspace:FindFirstChild("Camera").CameraType = "Custom"
-					return
+				game.workspace:FindFirstChild("Camera").CameraType = "Custom" return
 			end
+			task.wait()
 		end
 	end    
 })
