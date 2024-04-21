@@ -2938,8 +2938,7 @@ trol:AddToggle({
 					game.workspace:FindFirstChild("Camera").CameraType = "Custom"
 			if viewplr == false then
 				game.workspace:FindFirstChild("Camera").CameraSubject = game.Players.LocalPlayer.Character
-				game.workspace:FindFirstChild("Camera").CameraType = "Custom" return
-			end
+				game.workspace:FindFirstChild("Camera").CameraType = "Custom" return end
 			task.wait()
 		end
 	end    
