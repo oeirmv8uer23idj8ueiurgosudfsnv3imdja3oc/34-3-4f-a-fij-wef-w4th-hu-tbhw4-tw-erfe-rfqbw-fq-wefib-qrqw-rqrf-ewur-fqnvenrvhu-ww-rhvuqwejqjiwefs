@@ -2934,12 +2934,12 @@ trol:AddToggle({
 	Callback = function(dfiiurwgiuwe)
 		viewplr = dfiiurwgiuwe
 		while viewplr == true do
-					game.workspace:WaitForChild("Camera").CameraSubject = selected.Character
-					game.workspace:WaitForChild("Camera").CameraType = "Custom"
+					game.workspace:FindFirstChild("Camera").CameraSubject = selected.Character
+					game.workspace:FindFirstChild("Camera").CameraType = "Custom"
 			task.wait()
 			if viewplr == false then
-				game.workspace:WaitForChild("Camera").CameraSubject = game.Players.LocalPlayer.Character
-					game.workspace:WaitForChild("Camera").CameraType = "Custom"
+				game.workspace:FindFirstChild("Camera").CameraSubject = game.Players.LocalPlayer.Character
+				game.workspace:FindFirstChild("Camera").CameraType = "Custom"
 					return
 			end
 		end
