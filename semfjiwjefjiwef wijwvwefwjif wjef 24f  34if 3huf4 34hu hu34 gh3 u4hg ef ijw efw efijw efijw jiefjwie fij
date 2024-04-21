@@ -2924,6 +2924,28 @@ trol:AddButton({
 	end
 })
 
+local Section = trol:AddSection({
+	Name = "View Player"
+})
+
+trol:AddToggle({
+	Name = "View Player",
+	Default = false,
+	Callback = function(dfiiurwgiuwe)
+		viewplr = dfiiurwgiuwe
+		while viewplr == true do
+					game.workspace:WaitForChild("Camera").CameraSubject = selected
+					game.workspace:WaitForChild("Camera").CameraType = "Custom"
+			task.wait()
+			if viewplr == false then
+				game.workspace:WaitForChild("Camera").CameraSubject = game.Players.LocalPlayer
+					game.workspace:WaitForChild("Camera").CameraType = "Custom"
+					return
+			end
+		end
+	end    
+})
+
 local Section = admin:AddSection({
 	Name = "Troll Admin Commands"
 })
