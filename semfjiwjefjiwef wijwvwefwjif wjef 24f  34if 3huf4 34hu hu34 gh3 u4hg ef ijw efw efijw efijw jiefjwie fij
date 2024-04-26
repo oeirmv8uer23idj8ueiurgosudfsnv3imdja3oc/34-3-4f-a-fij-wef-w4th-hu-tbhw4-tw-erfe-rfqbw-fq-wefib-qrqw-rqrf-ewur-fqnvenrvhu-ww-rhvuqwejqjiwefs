@@ -1634,7 +1634,7 @@ local Section = tool:AddSection({
 tool:AddDropdown({
 	Name = "Select Angle",
 	Default = "",
-	Options = {"None", "X (- is left + is right)", "Y (- is under + is above)", "Z (- is back + is front)"},
+	Options = {"None", "X", "Y", "Z"},
 	Callback = function(egergergergergsasdfsfcsdv)
 		angleeeee = egergergergergsasdfsfcsdv
 	end    
@@ -1653,28 +1653,28 @@ tool:AddButton({
 	Name = "Increase Grip Tools!",
 	Callback = function()
       	if angleeeee == "None" then return end		
-		if angleeeee == "X (- is left + is right)" then
+		if angleeeee == "X" then
 			for weofij,wefoi in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 				if wefoi:IsA("Tool") then
-					wefoi.Grip = wefoi.Grip + Vector3.new(0,0,gripdistant)
+					wefoi.Grip = wefoi.Grip + Vector3.new(gripdistant,0,0)
 					wefoi.Parent = game.Players.LocalPlayer.Backpack
 					wait()
 					wefoi.Parent = game.Players.LocalPlayer.Character
 				end
 			end
-	elseif angleeeee == "Y (- is under + is above)" then
+	elseif angleeeee == "Y" then
 		for weofij,wefoi in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 			if wefoi:IsA("Tool") then
-				wefoi.Grip = wefoi.Grip + Vector3.new(0,gripdistant*-2,0)
+				wefoi.Grip = wefoi.Grip + Vector3.new(0,gripdistant,0)
 				wefoi.Parent = game.Players.LocalPlayer.Backpack
 				wait()
 				wefoi.Parent = game.Players.LocalPlayer.Character
 			end
 		end
-	elseif angleeeee == "Z (- is back + is front)" then
+	elseif angleeeee == "Z" then
 		for weofij,wefoi in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 			if wefoi:IsA("Tool") then
-				wefoi.Grip = wefoi.Grip + Vector3.new(gripdistant,0,0)
+				wefoi.Grip = wefoi.Grip + Vector3.new(0,0,gripdistant)
 				wefoi.Parent = game.Players.LocalPlayer.Backpack
 				wait()
 				wefoi.Parent = game.Players.LocalPlayer.Character
