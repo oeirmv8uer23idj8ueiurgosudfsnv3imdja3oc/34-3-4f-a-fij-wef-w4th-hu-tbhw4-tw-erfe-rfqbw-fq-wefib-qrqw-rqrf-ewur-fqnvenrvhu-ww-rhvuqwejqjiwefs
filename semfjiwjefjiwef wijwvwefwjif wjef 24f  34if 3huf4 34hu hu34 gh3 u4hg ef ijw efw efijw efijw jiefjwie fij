@@ -160,6 +160,12 @@ local tp = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local anti = Window:MakeTab({
+	Name = "Anti Function",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
 local ser = Window:MakeTab({
 	Name = "Server Function",
 	Icon = "rbxassetid://4483345998",
@@ -267,7 +273,7 @@ tool:AddButton({
 			end
 			task.wait(0.2)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-		wait(0.3)
+		wait(1)
 		for aidj,afh in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
 			if afh.name == toolthatiwanttodupe == false then
 				if afh:IsA("Tool") then
@@ -292,6 +298,7 @@ tool:AddButton({
 		for findin,toollel in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
 			if toollel:IsA("Tool") then
 				if toollel.Name == toolthatiwanttodupe then
+					toollllfoun = true
 					for basc,aijfw in pairs(toollel:GetDescendants()) do
 						if aijfw.Name == "Handle" then
 							aijfw.Name = "H⁥a⁥n⁥d⁥l⁥e"
@@ -305,6 +312,7 @@ tool:AddButton({
 		for fiifi,toollll in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 			if toollll:IsA("Tool") then
 				if toollll.Name == toolthatiwanttodupe then
+					toollllfoun = true
 					for nana,jjsjsj in pairs(toollll:GetDescendants()) do
 						if jjsjsj.Name == "Handle" then
 							toollll.Parent = game.Players.LocalPlayer.Character
@@ -312,12 +320,16 @@ tool:AddButton({
 				jjsjsj.Name = "H⁥a⁥n⁥d⁥l⁥e"
 				toollll.Parent = game.Players.LocalPlayer.Backpack
 				toollll.Parent = game.Players.LocalPlayer.Character
+				toolllffel = toollll
 						end
 					end
 			end
 		end
 		end
-        wait(0.5)
+		if toollllfoun == true then
+        repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild(toolllffel) == nil
+		toollllfoun = false
+		end
 		for m=1, siryessir do
 			if duping == false then game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false return end
 			if game:GetService("Workspace"):FindFirstChild("Camera") then
@@ -335,7 +347,9 @@ tool:AddButton({
 			game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe).Parent = game.Players.LocalPlayer.Backpack
 			game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(toolthatiwanttodupe).Parent = game.Players.LocalPlayer.Character
 			repeat 	if game:GetService("Workspace"):FindFirstChild("Camera") then
-				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe) == nil
+				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
+				 task.wait() until
+				 game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe) == nil
 		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 		wait(8)
@@ -405,7 +419,7 @@ tool:AddButton({
 for m,ifj in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 	if ifj:IsA("Tool") then
 		if ifj.name == "FireX" then
-			ifj.Grip = CFrame.new(0,2*m,0)
+			ifj.Grip = CFrame.new(0,-2*m,0)
 			ifj.name = nametools
 		end
 	end
@@ -1210,7 +1224,7 @@ tool:AddButton({
 for ejf,aigs in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 	if aigs:IsA("Tool") then
 		if aigs.name == "Box" then
-			aig.Grip = CFrame.new(0,1.5*ejf,0)
+			aig.Grip = CFrame.new(0,-1.5*ejf,0)
 			aig.name = nametools
 		end
 	end
@@ -1612,6 +1626,64 @@ tool:AddButton({
 		duping = false
 	end
 })
+
+local Section = tool:AddSection({
+	Name = "Manual Grip Tools Functions"
+})
+
+tool:AddDropdown({
+	Name = "Select Angle",
+	Default = "",
+	Options = {"None", "X (- is left + is right)", "Y (- is under + is above)", "Z (- is back + is front)"},
+	Callback = function(egergergergergsasdfsfcsdv)
+		angleeeee = egergergergergsasdfsfcsdv
+	end    
+})
+
+tool:AddTextbox({
+	Name = "Distant",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(wgnweifiqewfn)
+		gripdistant = wgnweifiqewfn
+	end	  
+})
+
+tool:AddButton({
+	Name = "Increase Grip Tools!",
+	Callback = function()
+      	if angleeeee == "None" then return end		
+		if angleeeee == "X (- is left + is right)" then
+			for weofij,wefoi in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+				if wefoi:IsA("Tool") then
+					wefoi.Grip = wefoi.Grip + Vector3.new(0,0,gripdistant)
+					wefoi.Parent = game.Players.LocalPlayer.Backpack
+					wait()
+					wefoi.Parent = game.Players.LocalPlayer.Character
+				end
+			end
+	elseif angleeeee == "Y (- is under + is above)" then
+		for weofij,wefoi in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if wefoi:IsA("Tool") then
+				wefoi.Grip = wefoi.Grip + Vector3.new(0,gripdistant*-2,0)
+				wefoi.Parent = game.Players.LocalPlayer.Backpack
+				wait()
+				wefoi.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+	elseif angleeeee == "Z (- is back + is front)" then
+		for weofij,wefoi in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if wefoi:IsA("Tool") then
+				wefoi.Grip = wefoi.Grip + Vector3.new(gripdistant,0,0)
+				wefoi.Parent = game.Players.LocalPlayer.Backpack
+				wait()
+				wefoi.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+  	end    
+	end
+})
+
 
 local plrlel = {}
 
@@ -2626,12 +2698,136 @@ tp:AddButton({
     end
 })
 
+local Section = anti:AddSection({
+	Name = "Anti Sit Function"
+})
+
+anti:AddToggle({
+	Name = "Anti Sit",
+	Default = false,
+	Callback = function(efwfefwefweadsasccdbdf)
+		antisit = efwfefwefweadsasccdbdf
+		if antisit == false then 
+			for sitpart,allsitpart in pairs(game.workspace:GetDescendants()) do
+				if allsitpart:IsA("Seat") or allsitpart:IsA("VehicleSeat") then
+					if allsitpart.Disabled == true then
+						allsitpart.Disabled = false
+					end
+				end
+			end
+			return 
+		elseif antisit == true then
+			for sitpart,allsitpart in pairs(game.workspace:GetDescendants()) do
+				if allsitpart:IsA("Seat") or allsitpart:IsA("VehicleSeat") then
+					if allsitpart.Disabled == false then
+						allsitpart.Disabled = true
+					end
+				end
+			end
+		end
+		local function asdawdsccxxc(allsitparttt)
+			if allsitparttt:IsA("Seat") or allsitparttt:IsA("VehicleSeat") then
+				if allsitparttt.Disabled == false then
+					allsitparttt.Disabled = true
+				end
+			end
+		end
+		game:GetService("Workspace").DescendantAdded:Connect(
+			function(allsitparttt)
+				asdawdsccxxc(allsitparttt)
+			end)
+	end    
+})
+
+local Section = anti:AddSection({
+	Name = "Anti Lag Functions"
+})
+
+anti:AddToggle({
+	Name = "Anti Lag From Another Player",
+	Default = false,
+	Callback = function(ttegradasads)
+		antilag = ttegradasads
+		if antilag == false then return 
+		elseif antilag == true then
+			for mnmnmmnm,yeikfs in pairs(game.workspace:GetDescendants()) do
+				if yeikfs:IsA("Tool") then
+					if yeikfs.Name == "FireX" or yeikfs.Name == "Box" then
+						for afvvz,awdvvm in pairs(yeikfs:GetDescendants()) do
+							if awdvvm:IsA("Part") or awdvvm:IsA("MeshPart") or awdvvm:IsA("BasePart") then
+								awdvvm:Destroy()
+							end
+						end
+					end
+				end
+			end
+		end
+		local function rrthtssffa(fgnfgnngfnxvx)
+			if fgnfgnngfnxvx:IsA("Tool") then
+				if fgnfgnngfnxvx.Name == "FireX" or fgnfgnngfnxvx.Name == "Box" then
+					for afvvz,awdvvm in pairs(fgnfgnngfnxvx:GetDescendants()) do
+						if awdvvm:IsA("Part") or awdvvm:IsA("MeshPart") or awdvvm:IsA("BasePart") then
+							awdvvm:Destroy()
+						end
+					end
+				end
+			end
+		end
+		game:GetService("Workspace").DescendantAdded:Connect(
+			function(fgnfgnngfnxvx)
+				rrthtssffa(fgnfgnngfnxvx)
+			end)
+	end    
+})
+
+anti:AddToggle({
+	Name = "Anti Lag From Yourself",
+	Default = false,
+	Callback = function(ttegradasads)
+		antilagselfklle = ttegradasads
+if antilagselfklle == false then return 
+elseif antilagselfklle == true then
+for iwjwf,udhf in pairs(game.Players.LocalPlayer:GetDescendants()) do
+    if udhf:IsA("Tool") then
+        if udhf.Name == "long firex lel" or udhf.Name == "long box lel" or udhf.Name == "firex wall lel" or udhf.Name == "lag plr lel" then
+            for efnasd,erugeurg in pairs(udhf:GetDescendants()) do
+                if erugeurg:IsA("Part") or erugeurg:IsA("MeshPart") or erugeurg:IsA("BasePart") then
+                    if erugeurg.Name == "Handle" == false then
+                        erugeurg:Destroy()
+                    end
+                end
+            end
+        end
+    end
+end
+local function antilagselflel(ttrbbtrbtrrynrn)
+    if ttrbbtrbtrrynrn:IsA("Tool") then
+        if ttrbbtrbtrrynrn.Name == "long firex lel" or ttrbbtrbtrrynrn.Name == "long box lel" or ttrbbtrbtrrynrn.Name == "firex wall lel" or ttrbbtrbtrrynrn.Name == "lag plr lel" then
+            for efnasd,erugeurg in pairs(ttrbbtrbtrrynrn:GetDescendants()) do
+                if erugeurg:IsA("Part") or erugeurg:IsA("MeshPart") or erugeurg:IsA("BasePart") then
+                    if erugeurg.Name == "Handle" == false then
+                        erugeurg:Destroy()
+                    end
+                end
+            end
+        end
+    end
+end
+game:GetService("Players").LocalPlayer.DescendantAdded:Connect(
+    function(ttrbbtrbtrrynrn)
+        antilagselflel(ttrbbtrbtrrynrn)
+    end)
+end
+	end
+})
+
 ser:AddButton({
 	Name = "Rejoin Server",
 	Callback = function()
 game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game:GetService("Players").LocalPlayer)
   	end    
 })
+
 ser:AddButton({
 	Name = "Change Server / Server Hop",
 	Callback = function()
