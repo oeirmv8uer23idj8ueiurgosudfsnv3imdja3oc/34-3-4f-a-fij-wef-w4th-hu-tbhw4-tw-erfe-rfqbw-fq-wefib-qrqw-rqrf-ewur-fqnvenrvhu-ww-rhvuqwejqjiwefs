@@ -375,6 +375,12 @@ tool:AddButton({
 	Callback = function()
 		safeskripz()
 		nametools = "long firex lel"
+OrionLib:MakeNotification({
+	Name = "Script",
+	Content = "Duping Tools Please Wait!",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
 		oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		toolthatiwanttodupe = "FireX"
 		tools = "FireX"
@@ -433,6 +439,12 @@ end
 				end
 			end
 		end
+OrionLib:MakeNotification({
+	Name = "Script",
+	Content = "Done, By the way you can lag people that near you by dancing or moving alot",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
   	end    
 })
 
@@ -1180,6 +1192,12 @@ tool:AddButton({
 	Name = "Long Box",
 	Callback = function()
 		safeskripz()
+OrionLib:MakeNotification({
+	Name = "Script",
+	Content = "Duping Tools Please Wait!",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
 		nametools = "long box lel"
 		oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		toolthatiwanttodupe = "Box"
@@ -1238,6 +1256,12 @@ for ejf,aigs in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildre
 				end
 			end
 		end
+OrionLib:MakeNotification({
+	Name = "Script",
+	Content = "Done, By the way you can lag people that near you by dancing or moving alot",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
   	end    
 })
 
