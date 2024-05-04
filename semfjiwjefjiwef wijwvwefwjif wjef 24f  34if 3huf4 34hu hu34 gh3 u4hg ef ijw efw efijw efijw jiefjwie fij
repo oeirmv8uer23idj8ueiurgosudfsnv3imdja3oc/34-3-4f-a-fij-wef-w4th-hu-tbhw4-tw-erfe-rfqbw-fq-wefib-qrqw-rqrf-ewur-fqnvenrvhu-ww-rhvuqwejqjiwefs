@@ -124,8 +124,8 @@ local function antifuncheck()
 			Image = "rbxassetid://4483345998",
 			Time = 5
 		})
-		 return end
-	end
+		return end
+end
 
 local Tab = Window:MakeTab({
 	Name = "Main",
