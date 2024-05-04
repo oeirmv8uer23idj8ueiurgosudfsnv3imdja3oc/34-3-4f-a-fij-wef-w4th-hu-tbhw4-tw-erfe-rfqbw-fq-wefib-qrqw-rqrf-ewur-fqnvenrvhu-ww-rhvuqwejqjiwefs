@@ -269,7 +269,7 @@ tool:AddButton({
 		if game:GetService("Workspace"):FindFirstChild("Camera") then
 			game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
 		for m=1,2 do task.wait()
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000000.414, -490, 100000000.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(999999999.414, -490, 999999999.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
 			end
 			task.wait(0.2)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
@@ -392,7 +392,7 @@ OrionLib:MakeNotification({
 		if game:GetService("Workspace"):FindFirstChild("Camera") then
 			game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
 		for m=1,2 do task.wait()
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000000.414, -490, 100000000.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(999999999.414, -490, 999999999.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
 			end
 			task.wait(0.2)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
@@ -464,11 +464,12 @@ tool:AddButton({
 		if game:GetService("Workspace"):FindFirstChild("Camera") then
 			game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
 		for m=1,2 do task.wait()
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000000.414, -490, 100000000.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(999999999.414, -490, 999999999.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
 			end
 			task.wait(0.2)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 		wait(0.3)
+		duping = true
 		for m=1, 71 do
 			if duping == false then game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false return end
 			if game:GetService("Workspace"):FindFirstChild("Camera") then
@@ -663,11 +664,12 @@ tool:AddButton({
 		if game:GetService("Workspace"):FindFirstChild("Camera") then
 			game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
 		for m=1,2 do task.wait()
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000000.414, -490, 100000000.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(999999999.414, -490, 999999999.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
 			end
 			task.wait(0.2)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 		wait(0.3)
+		duping = true
 		for m=1, 71 do
 			if duping == false then game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false return end
 			if game:GetService("Workspace"):FindFirstChild("Camera") then
@@ -1210,11 +1212,12 @@ OrionLib:MakeNotification({
 		if game:GetService("Workspace"):FindFirstChild("Camera") then
 			game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
 		for m=1,2 do task.wait()
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000000.414, -490, 100000000.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(999999999.414, -490, 999999999.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
 			end
 			task.wait(0.2)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 		wait(0.3)
+		duping = true
 		for m=1, 195 do
 			if duping == false then game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false return end
 			if game:GetService("Workspace"):FindFirstChild("Camera") then
@@ -1280,12 +1283,13 @@ tool:AddButton({
 		if game:GetService("Workspace"):FindFirstChild("Camera") then
 			game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
 		for m=1,2 do task.wait()
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000000.414, -490, 100000000.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(999999999.414, -490, 999999999.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
 			end
 			task.wait(0.2)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 		wait(0.3)
-		for m=1, 71 do
+		duping = true
+		for m=1, 76 do
 			if duping == false then game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false return end
 			if game:GetService("Workspace"):FindFirstChild("Camera") then
 				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
@@ -1489,11 +1493,12 @@ tool:AddButton({
 		if game:GetService("Workspace"):FindFirstChild("Camera") then
 			game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
 		for m=1,2 do task.wait()
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(100000000.414, -490, 100000000.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(999999999.414, -490, 999999999.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
 			end
 			task.wait(0.2)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 		wait(0.3)
+		duping = true
 		for m=1, 57 do
 			if duping == false then game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false return end
 			if game:GetService("Workspace"):FindFirstChild("Camera") then
@@ -2129,7 +2134,7 @@ end
 			tryingtomakeplrsit = false
 			if trolmethod == "Kill" then
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9999,-450,9999)
-				wait(0.5)
+				wait(0.25)
 				local args = {
 					[1] = "PlayerWantsToDeleteTool",
 					[2] = "ShoppingCart"
@@ -2980,6 +2985,12 @@ elseif workin == false then
 		Icon = "rbxassetid://4483345998",
 		PremiumOnly = false
 	})
+
+	local anti = Window:MakeTab({
+		Name = "Anti Function",
+		Icon = "rbxassetid://4483345998",
+		PremiumOnly = false
+	})
 	
 	local ser = Window:MakeTab({
 		Name = "Server Function",
@@ -3389,6 +3400,130 @@ tp:AddButton({
         oldcfrfwefwef = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
     end
 })
+
+local Section = anti:AddSection({
+	Name = "Anti Sit Function"
+})
+
+anti:AddToggle({
+	Name = "Anti Sit",
+	Default = false,
+	Callback = function(efwfefwefweadsasccdbdf)
+		antisit = efwfefwefweadsasccdbdf
+		if antisit == false then 
+			for sitpart,allsitpart in pairs(game.workspace:GetDescendants()) do
+				if allsitpart:IsA("Seat") or allsitpart:IsA("VehicleSeat") then
+					if allsitpart.Disabled == true then
+						allsitpart.Disabled = false
+					end
+				end
+			end
+			return 
+		elseif antisit == true then
+			for sitpart,allsitpart in pairs(game.workspace:GetDescendants()) do
+				if allsitpart:IsA("Seat") or allsitpart:IsA("VehicleSeat") then
+					if allsitpart.Disabled == false then
+						allsitpart.Disabled = true
+					end
+				end
+			end
+		end
+		local function asdawdsccxxc(allsitparttt)
+			if allsitparttt:IsA("Seat") or allsitparttt:IsA("VehicleSeat") then
+				if allsitparttt.Disabled == false then
+					allsitparttt.Disabled = true
+				end
+			end
+		end
+		game:GetService("Workspace").DescendantAdded:Connect(
+			function(allsitparttt)
+				asdawdsccxxc(allsitparttt)
+			end)
+	end    
+})
+
+local Section = anti:AddSection({
+	Name = "Anti Lag Functions"
+})
+
+anti:AddToggle({
+	Name = "Anti Lag From Another Player",
+	Default = false,
+	Callback = function(ttegradasads)
+		antilag = ttegradasads
+		if antilag == false then return 
+		elseif antilag == true then
+			for mnmnmmnm,yeikfs in pairs(game.workspace:GetDescendants()) do
+				if yeikfs:IsA("Tool") then
+					if yeikfs.Name == "FireX" or yeikfs.Name == "Box" then
+						for afvvz,awdvvm in pairs(yeikfs:GetDescendants()) do
+							if awdvvm:IsA("Part") or awdvvm:IsA("MeshPart") or awdvvm:IsA("BasePart") then
+								awdvvm:Destroy()
+							end
+						end
+					end
+				end
+			end
+		end
+		local function rrthtssffa(fgnfgnngfnxvx)
+			if fgnfgnngfnxvx:IsA("Tool") then
+				if fgnfgnngfnxvx.Name == "FireX" or fgnfgnngfnxvx.Name == "Box" then
+					for afvvz,awdvvm in pairs(fgnfgnngfnxvx:GetDescendants()) do
+						if awdvvm:IsA("Part") or awdvvm:IsA("MeshPart") or awdvvm:IsA("BasePart") then
+							awdvvm:Destroy()
+						end
+					end
+				end
+			end
+		end
+		game:GetService("Workspace").DescendantAdded:Connect(
+			function(fgnfgnngfnxvx)
+				rrthtssffa(fgnfgnngfnxvx)
+			end)
+	end    
+})
+
+anti:AddToggle({
+	Name = "Anti Lag From Yourself",
+	Default = false,
+	Callback = function(ttegradasads)
+		antilagselfklle = ttegradasads
+if antilagselfklle == false then return 
+elseif antilagselfklle == true then
+for iwjwf,udhf in pairs(game.Players.LocalPlayer:GetDescendants()) do
+    if udhf:IsA("Tool") then
+        if udhf.Name == "long firex lel" or udhf.Name == "long box lel" or udhf.Name == "firex wall lel" or udhf.Name == "lag plr lel" then
+            for efnasd,erugeurg in pairs(udhf:GetDescendants()) do
+                if erugeurg:IsA("Part") or erugeurg:IsA("MeshPart") or erugeurg:IsA("BasePart") then
+                    if erugeurg.Name == "Handle" == false then
+                        erugeurg:Destroy()
+                    end
+                end
+            end
+        end
+    end
+end
+local function antilagselflel(ttrbbtrbtrrynrn)
+    if ttrbbtrbtrrynrn:IsA("Tool") then
+        if ttrbbtrbtrrynrn.Name == "long firex lel" or ttrbbtrbtrrynrn.Name == "long box lel" or ttrbbtrbtrrynrn.Name == "firex wall lel" or ttrbbtrbtrrynrn.Name == "lag plr lel" then
+            for efnasd,erugeurg in pairs(ttrbbtrbtrrynrn:GetDescendants()) do
+                if erugeurg:IsA("Part") or erugeurg:IsA("MeshPart") or erugeurg:IsA("BasePart") then
+                    if erugeurg.Name == "Handle" == false then
+                        erugeurg:Destroy()
+                    end
+                end
+            end
+        end
+    end
+end
+game:GetService("Players").LocalPlayer.DescendantAdded:Connect(
+    function(ttrbbtrbtrrynrn)
+        antilagselflel(ttrbbtrbtrrynrn)
+    end)
+end
+	end
+})
+
 
 ser:AddButton({
 	Name = "Rejoin Server",
