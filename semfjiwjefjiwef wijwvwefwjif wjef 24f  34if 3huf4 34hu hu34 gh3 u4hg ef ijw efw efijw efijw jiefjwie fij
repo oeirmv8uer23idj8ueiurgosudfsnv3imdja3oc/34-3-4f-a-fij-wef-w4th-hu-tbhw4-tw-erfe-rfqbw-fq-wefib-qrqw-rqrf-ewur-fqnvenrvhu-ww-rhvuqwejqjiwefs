@@ -106,14 +106,6 @@ local function safeskripz()
            Time = 5
        })
         return end
-       if antisit == true then  
-       OrionLib:MakeNotification({
-           Name = "Script Warning",
-           Content = "Anti sit still enabled if you wanna use another function please disable it",
-           Image = "rbxassetid://4483345998",
-           Time = 5
-       })
-        return end
     if looptp == true then
         OrionLib:MakeNotification({
             Name = "Script Warning",
@@ -123,6 +115,17 @@ local function safeskripz()
         })
      return end
 end
+
+local function antifuncheck()
+	if antisit == true then  
+		OrionLib:MakeNotification({
+			Name = "Script Warning",
+			Content = "Anti sit still enabled if you wanna use another function please disable it",
+			Image = "rbxassetid://4483345998",
+			Time = 5
+		})
+		 return end
+	end
 
 local Tab = Window:MakeTab({
 	Name = "Main",
