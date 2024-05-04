@@ -425,11 +425,11 @@ OrionLib:MakeNotification({
 		toolgrip = true
 		duping = false
 		wait()
-for m,ifj in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-	if ifj:IsA("Tool") then
-		if ifj.name == "FireX" then
-			ifj.Grip = CFrame.new(0,-2*m,0)
-			ifj.name = nametools
+for m,egrsd in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+	if egrsd:IsA("Tool") then
+		if egrsd.name == "FireX" then
+			egrsd.Grip = CFrame.new(0,-2*m,0)
+			egrsd.Name = nametools
 		end
 	end
 end
@@ -1249,7 +1249,7 @@ for ejf,aigs in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildre
 	if aigs:IsA("Tool") then
 		if aigs.name == "Box" then
 			aigs.Grip = CFrame.new(0,-1.5*ejf,0)
-			aigs.name = nametools
+			aigs.Name = nametools
 		end
 	end
 	end
