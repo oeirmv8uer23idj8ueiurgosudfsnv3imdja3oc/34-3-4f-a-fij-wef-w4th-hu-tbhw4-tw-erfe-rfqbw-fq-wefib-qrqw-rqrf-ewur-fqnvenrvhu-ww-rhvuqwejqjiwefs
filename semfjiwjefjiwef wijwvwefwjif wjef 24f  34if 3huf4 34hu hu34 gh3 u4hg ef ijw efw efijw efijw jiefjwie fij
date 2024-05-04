@@ -427,7 +427,7 @@ OrionLib:MakeNotification({
 		wait()
 for m,egrsd in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 	if egrsd:IsA("Tool") then
-		if egrsd.name == "FireX" then
+		if egrsd.Name == "FireX" then
 			egrsd.Grip = CFrame.new(0,-2*m,0)
 			egrsd.Name = nametools
 		end
@@ -1241,13 +1241,13 @@ OrionLib:MakeNotification({
 				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe) == nil
 		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-		wait(8)
+		wait(8.5)
 		toolgrip = true
 		duping = false
 		wait()
 for ejf,aigs in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 	if aigs:IsA("Tool") then
-		if aigs.name == "Box" then
+		if aigs.Name == "Box" then
 			aigs.Grip = CFrame.new(0,-1.5*ejf,0)
 			aigs.Name = nametools
 		end
