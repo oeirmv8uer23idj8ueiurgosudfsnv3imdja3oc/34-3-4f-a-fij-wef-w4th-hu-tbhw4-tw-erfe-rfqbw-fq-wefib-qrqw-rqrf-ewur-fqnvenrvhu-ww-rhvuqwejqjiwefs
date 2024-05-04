@@ -124,8 +124,8 @@ local function antifuncheck()
 			Image = "rbxassetid://4483345998",
 			Time = 5
 		})
-		return end
-end
+		 return end
+	end
 
 local Tab = Window:MakeTab({
 	Name = "Main",
@@ -1248,8 +1248,8 @@ OrionLib:MakeNotification({
 for ejf,aigs in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 	if aigs:IsA("Tool") then
 		if aigs.name == "Box" then
-			aig.Grip = CFrame.new(0,-1.5*ejf,0)
-			aig.name = nametools
+			aigs.Grip = CFrame.new(0,-1.5*ejf,0)
+			aigs.name = nametools
 		end
 	end
 	end
