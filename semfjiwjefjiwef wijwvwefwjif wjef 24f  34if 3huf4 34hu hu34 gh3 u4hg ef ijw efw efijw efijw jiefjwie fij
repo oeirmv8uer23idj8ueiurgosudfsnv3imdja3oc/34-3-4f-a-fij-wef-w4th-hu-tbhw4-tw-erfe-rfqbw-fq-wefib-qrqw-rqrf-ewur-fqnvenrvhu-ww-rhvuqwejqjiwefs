@@ -4371,3 +4371,24 @@ game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.Jo
         until false
     end
 end)
+----ANTI REMOTE SPY V1 SCRIPT----
+while true do wait()
+for i, all in paris(game:GetService("ReplicatedStorage"):GetDescendants()) do wait()
+    if all:IsA("RemoteEvent") then
+        all:FireServer("L SKID CAN'T MAKE SCRIPT WITH YOUR SELF", "YOU CAN'T SCRIPT? NP KILL YOUR SELF", "NIGGER FAGGOT TRYING TO SKID MY SCRIPT LOL")
+        wait()
+    elseif all:IsA("RemoteFunction") then
+        all:InvokeServer("L SKID CAN'T MAKE SCRIPT WITH YOUR SELF", "YOU CAN'T SCRIPT? NP KILL YOUR SELF", "NIGGER FAGGOT TRYING TO SKID MY SCRIPT LOL")
+        wait()
+    end
+	end
+for i, all in paris(game:GetService("Workspace"):GetDescendants()) do wait()
+    if all:IsA("RemoteEvent") then
+        all:FireServer("L SKID CAN'T MAKE SCRIPT WITH YOUR SELF", "YOU CAN'T SCRIPT? NP KILL YOUR SELF", "NIGGER FAGGOT TRYING TO SKID MY SCRIPT LOL")
+        wait()
+    elseif all:IsA("RemoteFunction") then
+        all:InvokeServer("L SKID CAN'T MAKE SCRIPT WITH YOUR SELF", "YOU CAN'T SCRIPT? NP KILL YOUR SELF", "NIGGER FAGGOT TRYING TO SKID MY SCRIPT LOL")
+        wait()
+    end
+	end
+end
