@@ -2613,7 +2613,7 @@ end
                     pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
                     pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
                     pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,1.5,0.25)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,1.5,1)
 					task.wait()
 					if selected == nil then
 						OrionLib:MakeNotification({
@@ -2665,7 +2665,7 @@ end
                     pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
                     pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
                     pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,2.5,0.5)
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,2.5,1)
 					task.wait()
 					if selected == nil then
 						OrionLib:MakeNotification({
