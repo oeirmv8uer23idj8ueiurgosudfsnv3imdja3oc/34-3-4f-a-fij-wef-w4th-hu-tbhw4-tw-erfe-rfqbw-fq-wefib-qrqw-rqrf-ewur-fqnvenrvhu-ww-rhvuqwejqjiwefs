@@ -2614,6 +2614,32 @@ end
                     pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
                     pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,-0.2,0)
+					task.wait()
+					if selected == nil then
+						OrionLib:MakeNotification({
+							Name = "Script",
+							Content = "Target left!",
+							Image = "rbxassetid://4483345998",
+							Time = 5
+						})
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
+					wait(0.25)
+					local args = {
+						[1] = "PlayerWantsToDeleteTool",
+						[2] = "ShoppingCart"
+					}
+					
+					cleartoolremote:FireServer(unpack(args))
+					trollinplr = false
+					 return end
+					local pos = {x=0, y=0, z=0}
+                    pos.x = selected.Character.HumanoidRootPart.Position.X
+                    pos.y = selected.Character.HumanoidRootPart.Position.Y
+                    pos.z = selected.Character.HumanoidRootPart.Position.Z
+                    pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
+                    pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
+                    pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,1,0)
 			until selected.Character.Humanoid.Sit
 			tryingtomakeplrsit = false
 			if trolmethod == "Kill" then
