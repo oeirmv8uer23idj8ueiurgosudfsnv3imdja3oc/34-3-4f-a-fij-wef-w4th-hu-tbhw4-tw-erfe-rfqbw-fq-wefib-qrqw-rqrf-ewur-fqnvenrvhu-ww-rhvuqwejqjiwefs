@@ -2639,7 +2639,59 @@ end
                     pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
                     pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
                     pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,1.5,-2)
+					task.wait()
+					if selected == nil then
+						OrionLib:MakeNotification({
+							Name = "Script",
+							Content = "Target left!",
+							Image = "rbxassetid://4483345998",
+							Time = 5
+						})
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
+					wait(0.25)
+					local args = {
+						[1] = "PlayerWantsToDeleteTool",
+						[2] = "ShoppingCart"
+					}
+					
+					cleartoolremote:FireServer(unpack(args))
+					trollinplr = false
+					 return end
+					local pos = {x=0, y=0, z=0}
+                    pos.x = selected.Character.HumanoidRootPart.Position.X
+                    pos.y = selected.Character.HumanoidRootPart.Position.Y
+                    pos.z = selected.Character.HumanoidRootPart.Position.Z
+                    pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
+                    pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
+                    pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,-1,0)
+					task.wait()
+					if selected == nil then
+						OrionLib:MakeNotification({
+							Name = "Script",
+							Content = "Target left!",
+							Image = "rbxassetid://4483345998",
+							Time = 5
+						})
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
+					wait(0.25)
+					local args = {
+						[1] = "PlayerWantsToDeleteTool",
+						[2] = "ShoppingCart"
+					}
+					
+					cleartoolremote:FireServer(unpack(args))
+					trollinplr = false
+					 return end
+					local pos = {x=0, y=0, z=0}
+                    pos.x = selected.Character.HumanoidRootPart.Position.X
+                    pos.y = selected.Character.HumanoidRootPart.Position.Y
+                    pos.z = selected.Character.HumanoidRootPart.Position.Z
+                    pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
+                    pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
+                    pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,0,-1)
 					task.wait()
 					if selected == nil then
 						OrionLib:MakeNotification({
@@ -2692,6 +2744,32 @@ end
                     pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
                     pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,1,0)
+					task.wait()
+					if selected == nil then
+						OrionLib:MakeNotification({
+							Name = "Script",
+							Content = "Target left!",
+							Image = "rbxassetid://4483345998",
+							Time = 5
+						})
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
+					wait(0.25)
+					local args = {
+						[1] = "PlayerWantsToDeleteTool",
+						[2] = "ShoppingCart"
+					}
+					
+					cleartoolremote:FireServer(unpack(args))
+					trollinplr = false
+					 return end
+					local pos = {x=0, y=0, z=0}
+                    pos.x = selected.Character.HumanoidRootPart.Position.X
+                    pos.y = selected.Character.HumanoidRootPart.Position.Y
+                    pos.z = selected.Character.HumanoidRootPart.Position.Z
+                    pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
+                    pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
+                    pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,2.5,-2.5)
 					task.wait()
 					if selected == nil then
 						OrionLib:MakeNotification({
@@ -3241,13 +3319,23 @@ trol:AddToggle({
 	Default = false,
 	Callback = function(dfiiurwgiuwe)
 		viewplr = dfiiurwgiuwe
-		while viewplr == true do
+		while viewplr == true do task.wait()
+			if selected == nil then
+				OrionLib:MakeNotification({
+					Name = "Script",
+					Content = "Target left!",
+					Image = "rbxassetid://4483345998",
+					Time = 5
+				})
+				dfiiurwgiuwe = false
+				viewplr = false
+			end
 					game.workspace:WaitForChild("Camera").CameraSubject = selected.Character
 					game.workspace:WaitForChild("Camera").CameraType = "Custom"
 			if viewplr == false then
+				game.workspace:WaitForChild("Camera"):Destroy()
 				game.workspace:WaitForChild("Camera").CameraSubject = game.Players.LocalPlayer.Character
 				game.workspace:WaitForChild("Camera").CameraType = "Custom" return end
-			task.wait()
 		end
 	end    
 })
@@ -3271,8 +3359,8 @@ admin:AddButton({
 		local args = {
 			[1] = adminselected.Character:FindFirstChild("HumanoidRootPart"),
 			[2] = adminselected.Character:FindFirstChild("HumanoidRootPart"),
-			[3] = Vector3.new(Random.new():NextNumber(999999999,99999999999999), Random.new():NextNumber(999999999,99999999999999), Random.new():NextNumber(999999999,99999999999999)),
-			[4] = Vector3.new(Random.new():NextNumber(999999999,99999999999999), Random.new():NextNumber(999999999,99999999999999), Random.new():NextNumber(999999999,99999999999999)),
+			[3] = Vector3.new(math.random(999999999,99999999999999), math.random(999999999,99999999999999), math.random(999999999,99999999999999)),
+			[4] = Vector3.new(math.random(999999999,99999999999999), math.random(999999999,99999999999999), math.random(999999999,99999999999999)),
 			[5] = adminselected.Character:FindFirstChild("HumanoidRootPart"),
 			[6] = adminselected.Character:FindFirstChild("HumanoidRootPart"),
 			[7] = 0,
@@ -3304,8 +3392,8 @@ admin:AddButton({
 			local args = {
 				[1] = v.Character:FindFirstChild("HumanoidRootPart"),
 				[2] = v.Character:FindFirstChild("HumanoidRootPart"),
-				[3] = Vector3.new(Random.new():NextNumber(999999999,99999999999999), Random.new():NextNumber(999999999,99999999999999), Random.new():NextNumber(999999999,99999999999999)),
-				[4] = Vector3.new(Random.new():NextNumber(999999999,99999999999999), Random.new():NextNumber(999999999,99999999999999), Random.new():NextNumber(999999999,99999999999999)),
+				[3] = Vector3.new(math.random(999999999,99999999999999), math.random(999999999,99999999999999), math.random(999999999,99999999999999)),
+				[4] = Vector3.new(math.random(999999999,99999999999999), math.random(999999999,99999999999999), math.random(999999999,99999999999999)),
 				[5] = v.Character:FindFirstChild("HumanoidRootPart"),
 				[6] = v.Character:FindFirstChild("HumanoidRootPart"),
 				[7] = 0,
