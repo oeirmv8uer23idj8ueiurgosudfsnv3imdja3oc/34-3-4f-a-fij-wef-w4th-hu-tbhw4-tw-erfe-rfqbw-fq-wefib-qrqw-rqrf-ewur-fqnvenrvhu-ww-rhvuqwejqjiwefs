@@ -2614,6 +2614,58 @@ end
                     pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
                     pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,-0.2,0)
+					task.wait()
+					if selected == nil then
+						OrionLib:MakeNotification({
+							Name = "Script",
+							Content = "Target left!",
+							Image = "rbxassetid://4483345998",
+							Time = 5
+						})
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
+					wait(0.25)
+					local args = {
+						[1] = "PlayerWantsToDeleteTool",
+						[2] = "ShoppingCart"
+					}
+					
+					cleartoolremote:FireServer(unpack(args))
+					trollinplr = false
+					 return end
+					local pos = {x=0, y=0, z=0}
+                    pos.x = selected.Character.HumanoidRootPart.Position.X
+                    pos.y = selected.Character.HumanoidRootPart.Position.Y
+                    pos.z = selected.Character.HumanoidRootPart.Position.Z
+                    pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
+                    pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
+                    pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,1,0)
+					task.wait()
+					if selected == nil then
+						OrionLib:MakeNotification({
+							Name = "Script",
+							Content = "Target left!",
+							Image = "rbxassetid://4483345998",
+							Time = 5
+						})
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
+					wait(0.25)
+					local args = {
+						[1] = "PlayerWantsToDeleteTool",
+						[2] = "ShoppingCart"
+					}
+					
+					cleartoolremote:FireServer(unpack(args))
+					trollinplr = false
+					 return end
+					local pos = {x=0, y=0, z=0}
+                    pos.x = selected.Character.HumanoidRootPart.Position.X
+                    pos.y = selected.Character.HumanoidRootPart.Position.Y
+                    pos.z = selected.Character.HumanoidRootPart.Position.Z
+                    pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
+                    pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
+                    pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) + Vector3.new(0,1.5,0)
 			until selected.Character.Humanoid.Sit
 			tryingtomakeplrsit = false
 			if trolmethod == "Kill" then
@@ -2855,6 +2907,60 @@ end
                     pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
                     pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) * CFrame.new(0,0.2,3.5)
+					task.wait()
+					if selected == nil then
+						OrionLib:MakeNotification({
+							Name = "Script",
+							Content = "Target left!",
+							Image = "rbxassetid://4483345998",
+							Time = 5
+						})
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
+					wait(0.25)
+					local args = {
+						[1] = "PlayerWantsToDeleteTool",
+						[2] = "ShoppingCart"
+					}
+					
+					cleartoolremote:FireServer(unpack(args))
+					trollinplr = false
+					 return end
+					local pos = {x=0, y=0, z=0}
+                    pos.x = selected.Character.HumanoidRootPart.Position.X
+                    pos.y = selected.Character.HumanoidRootPart.Position.Y
+                    pos.z = selected.Character.HumanoidRootPart.Position.Z
+                    pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
+                    pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
+                    pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) * CFrame.new(0,0.2,4)
+					task.wait()
+					if selected == nil then
+						OrionLib:MakeNotification({
+							Name = "Script",
+							Content = "Target left!",
+							Image = "rbxassetid://4483345998",
+							Time = 5
+						})
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcframe
+					wait(0.25)
+					local args = {
+						[1] = "PlayerWantsToDeleteTool",
+						[2] = "ShoppingCart"
+					}
+					
+					cleartoolremote:FireServer(unpack(args))
+					trollinplr = false
+					 return end
+					local pos = {x=0, y=0, z=0}
+                    pos.x = selected.Character.HumanoidRootPart.Position.X
+                    pos.y = selected.Character.HumanoidRootPart.Position.Y
+                    pos.z = selected.Character.HumanoidRootPart.Position.Z
+                    pos.x = pos.x + selected.Character.HumanoidRootPart.Velocity.X / 2
+                    pos.y = pos.y + selected.Character.HumanoidRootPart.Velocity.Y / 2
+                    pos.z = pos.z + selected.Character.HumanoidRootPart.Velocity.Z / 2
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(pos.x,pos.y,pos.z)) * CFrame.new(0,0.2,4.5)
+
+
 			until selected.Character.Humanoid.Sit
 			tryingtomakeplrsit = false
 			if trolmethod == "Kill" then
@@ -4371,24 +4477,3 @@ game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.Jo
         until false
     end
 end)
-----ANTI REMOTE SPY V1 SCRIPT----
-while true do wait()
-for i, all in paris(game:GetService("ReplicatedStorage"):GetDescendants()) do wait()
-    if all:IsA("RemoteEvent") then
-        all:FireServer("L SKID CAN'T MAKE SCRIPT WITH YOUR SELF", "YOU CAN'T SCRIPT? NP KILL YOUR SELF", "NIGGER FAGGOT TRYING TO SKID MY SCRIPT LOL")
-        wait()
-    elseif all:IsA("RemoteFunction") then
-        all:InvokeServer("L SKID CAN'T MAKE SCRIPT WITH YOUR SELF", "YOU CAN'T SCRIPT? NP KILL YOUR SELF", "NIGGER FAGGOT TRYING TO SKID MY SCRIPT LOL")
-        wait()
-    end
-	end
-for i, all in paris(game:GetService("Workspace"):GetDescendants()) do wait()
-    if all:IsA("RemoteEvent") then
-        all:FireServer("L SKID CAN'T MAKE SCRIPT WITH YOUR SELF", "YOU CAN'T SCRIPT? NP KILL YOUR SELF", "NIGGER FAGGOT TRYING TO SKID MY SCRIPT LOL")
-        wait()
-    elseif all:IsA("RemoteFunction") then
-        all:InvokeServer("L SKID CAN'T MAKE SCRIPT WITH YOUR SELF", "YOU CAN'T SCRIPT? NP KILL YOUR SELF", "NIGGER FAGGOT TRYING TO SKID MY SCRIPT LOL")
-        wait()
-    end
-	end
-end
