@@ -3320,7 +3320,7 @@ trol:AddToggle({
 	Callback = function(dfiiurwgiuwe)
 		viewplr = dfiiurwgiuwe
 		while viewplr == true do task.wait()
-			if selected == nil then
+			if selected == false then
 				OrionLib:MakeNotification({
 					Name = "Script",
 					Content = "Target left!",
