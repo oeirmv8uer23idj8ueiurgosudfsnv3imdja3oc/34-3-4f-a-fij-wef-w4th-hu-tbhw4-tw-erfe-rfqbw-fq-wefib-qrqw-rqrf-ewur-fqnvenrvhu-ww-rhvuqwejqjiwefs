@@ -341,6 +341,7 @@ tool:AddButton({
 		end
 		if toollllfoun2 == true then
 			repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild(tollllahhhh) == nil
+			toollllfoun2 = false
 		end
 		for m=1, siryessir do
 			if duping == false then game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false return end
