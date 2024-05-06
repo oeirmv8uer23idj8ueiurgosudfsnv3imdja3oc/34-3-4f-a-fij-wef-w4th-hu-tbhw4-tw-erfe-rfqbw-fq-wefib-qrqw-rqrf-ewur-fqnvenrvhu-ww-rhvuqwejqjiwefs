@@ -315,6 +315,7 @@ tool:AddButton({
 						tollllahhhh = toollel
 					end
 				end
+			else toollllfoun2 = false
 			end
 		end
 	end
@@ -332,6 +333,7 @@ tool:AddButton({
 				toolllffel = toollll
 						end
 					end
+				else toollllfoun = false
 			end
 		end
 		end
