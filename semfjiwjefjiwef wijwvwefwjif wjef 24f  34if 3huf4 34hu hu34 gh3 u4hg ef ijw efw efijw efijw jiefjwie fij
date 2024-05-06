@@ -127,6 +127,11 @@ local function antifuncheck()
 		 return end
 	end
 
+local	function GetRoot(plr)
+	local RootPart = plr.Character:FindFirstChild("HumanoidRootPart") or plr.Character:FindFirstChild("UpperTorso")
+	return RootPart
+end
+
 local Tab = Window:MakeTab({
 	Name = "Main",
 	Icon = "rbxassetid://4483345998",
@@ -278,7 +283,7 @@ tool:AddButton({
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 		wait(1)
 		for aidj,afh in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
-			if afh.name == toolthatiwanttodupe == false then
+			if afh.Name == toolthatiwanttodupe == false then
 				if afh:IsA("Tool") then
 					afh.Parent = game.Players.LocalPlayer.Backpack
 				end
@@ -286,7 +291,7 @@ tool:AddButton({
 		end
 		for aiefhiewhwf,dvjbvj in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
 			if dvjbvj:IsA("Tool") then
-				if dvjbvj.name == toolthatiwanttodupe == false then
+				if dvjbvj.Name == toolthatiwanttodupe == false then
 					dvjbvj:Destroy()
 				end
 			end
@@ -3607,7 +3612,7 @@ lp:AddButton({
 				if abce.Anchored then
 					abce.Anchored = false
 				end
-					game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(9999999999999,-475,9999999999999)
+					GetRoot(game.Players.LocalPlayer).CFrame = CFrame.new(999999999.414, -490, 999999999.414, 0.974360406, -0.175734088, 0.14049761, -0.133441404, 0.0514053069, 0.989722729, -0.181150302, -0.983094692, 0.0266370922)
 				end
 			end
 	elseif  resetmtd == "Remove Head" then
@@ -3636,7 +3641,7 @@ local Section = lp:AddSection({
 })
 
 lp:AddDropdown({
-	Name = "Which Part",
+	Name = "Select Part",
 	Default = "None",
 	Options = {"None", "HumanoidRootPart (IMPORTANT PART IF YOU REMOVE YOU WILL CANT TP OR MOVE)", "Head", "UpperTorso", "LowerTorso", "RightUpperArm", "RightLowerArm", "RightHand", "LeftUpperArm", "LeftLowerArm", "LeftHand", "UpperRightLeg", "LowerRightLeg", "LeftFoot", "UpperLeftLeg", "LeftLowerLeg", "LeftFoot"},
 	Callback = function(tyjtyjtktyktky)
@@ -3645,7 +3650,7 @@ lp:AddDropdown({
 })
 
 lp:AddButton({
-	Name = "Remove The Part",
+	Name = "Remove The Part (CLIENT)",
 	Callback = function()
         if rartrt == "None" then return end
         if rartrt == "HumanoidRootPart (IMPORTANT PART IF YOU REMOVE YOU WILL CANT TP OR MOVE)" then 
