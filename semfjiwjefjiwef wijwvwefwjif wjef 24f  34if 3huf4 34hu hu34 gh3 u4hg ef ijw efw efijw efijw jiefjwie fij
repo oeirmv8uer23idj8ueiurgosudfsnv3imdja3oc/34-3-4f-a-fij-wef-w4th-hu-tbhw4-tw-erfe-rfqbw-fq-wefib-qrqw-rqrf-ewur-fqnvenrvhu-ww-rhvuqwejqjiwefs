@@ -306,12 +306,13 @@ tool:AddButton({
 		for findin,toollel in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
 			if toollel:IsA("Tool") then
 				if toollel.Name == toolthatiwanttodupe then
-					toollllfoun = true
+					toollllfoun2 = true
 					for basc,aijfw in pairs(toollel:GetDescendants()) do
 						if aijfw.Name == "Handle" then
 							aijfw.Name = "H⁥a⁥n⁥d⁥l⁥e"
 							toollel.Parent = game.Players.LocalPlayer.Backpack
 						toollel.Parent = game.Players.LocalPlayer.Character
+						tollllahhhh = toollel
 					end
 				end
 			end
@@ -337,6 +338,9 @@ tool:AddButton({
 		if toollllfoun == true then
         repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild(toolllffel) == nil
 		toollllfoun = false
+		end
+		if toollllfoun2 == true then
+			repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild(tollllahhhh) == nil
 		end
 		for m=1, siryessir do
 			if duping == false then game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false return end
