@@ -19,6 +19,16 @@ game:GetService("StarterGui"):SetCore("SendNotification",{Title="Script",Text="L
 
 local Window = OrionLib:MakeWindow({Name = "f0rtuit0us hub", HidePremium = false, SaveConfig = false, ConfigFolder = ""})
 
+antiskidweofkwokfasidiabwrrjjjnnnmf0rtuit0ushubantiskidloldasjdjwjdjajsewhgh = true
+
+local plrlel = {}
+
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+	if v.Name == game.Players.LocalPlayer.Name == false then
+    	table.insert(plrlel,v.Name)
+	end
+end
+
 if workin == true then
 
 OrionLib:MakeNotification({
@@ -2510,15 +2520,6 @@ tool:AddButton({
   	end    
 	end
 })
-
-
-local plrlel = {}
-
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-	if v.Name == game.Players.LocalPlayer.Name == false then
-    	table.insert(plrlel,v.Name)
-	end
-end
 
 trol:AddDropdown({
 	Name = "Select player",
