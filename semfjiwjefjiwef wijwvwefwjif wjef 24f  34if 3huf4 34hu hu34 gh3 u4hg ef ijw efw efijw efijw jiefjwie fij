@@ -2568,35 +2568,21 @@ trol:AddButton({
 			game.Players.LocalPlayer.Character.Humanoid.Sit = false
 		end
 		if method == "Couch" then
-            for awd,czx in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
-            if czx.name == "Couch" then
-            local args = {
-                [1] = "PlayerWantsToDeleteTool",
-                [2] = czx.Name
-            }
-            
-            cleartoolremote:FireServer(unpack(args))
-        end
-    end
-    for awd,czx in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-        if czx.name == "Couch" then
-        local args = {
-            [1] = "PlayerWantsToDeleteTool",
-            [2] = czx.Name
-        }
-        
-        cleartoolremote:FireServer(unpack(args))
-    end
-end
+            if game.Players.LocalPlayer.Character:FindFirstChild("Couch") or game.Players.LocalPlayer.Backpack:FindFirstChild("Couch") then
+				getcouch = false
+					else getcouch = true
+				end
             wait()
+			if getcouch == true then
 			local args = {
 				[1] = "PickingTools",
 				[2] = "Couch"
 			}
 			
 			picktoolremote:InvokeServer(unpack(args))
+		end
 			wait()
-			game.Players.LocalPlayer.Backpack.Couch.Grip = CFrame.new(0,0,0) + Vector3.new(0, 2, -5)
+			game.Players.LocalPlayer.Backpack.Couch.Grip = CFrame.new(0,2,-5)
 			wait()
 			game.Players.LocalPlayer.Backpack.Couch.Parent = game.Players.LocalPlayer.Character
 			wait(0.25)
@@ -3032,20 +3018,18 @@ end
 			end
 		elseif method == "ShoppingCart" then
             if game.Players.LocalPlayer.Character:FindFirstChild("ShoppingCart") or game.Players.LocalPlayer.Backpack:FindFirstChild("ShoppingCart") then
-            local args = {
-                [1] = "PlayerWantsToDeleteTool",
-                [2] = "ShoppingCart"
-            }
-            
-            cleartoolremote:FireServer(unpack(args))
+		getshoppingcart = false
+			else getshoppingcart = true
         end
             wait()
+			if getshoppingcart == true then
 			local args = {
 				[1] = "PickingTools",
 				[2] = "ShoppingCart"
 			}
 			
 			picktoolremote:InvokeServer(unpack(args))
+		end
 			wait()
 			game.Players.LocalPlayer.Backpack.ShoppingCart.Parent = game.Players.LocalPlayer.Character
 			wait(0.25)
