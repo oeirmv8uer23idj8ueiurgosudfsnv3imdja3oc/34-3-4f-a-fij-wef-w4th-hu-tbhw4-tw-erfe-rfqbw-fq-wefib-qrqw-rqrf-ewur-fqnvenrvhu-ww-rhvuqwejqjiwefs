@@ -5106,3 +5106,17 @@ game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.Jo
         until false
     end
 end)
+
+while true do task.wait()
+if antiskidweofkwokfasidiabwrrjjjnnnmf0rtuit0ushubantiskidloldasjdjwjdjajsewhgh == true then
+for asd,ef in pairs(game.ReplicatedStorage:GetDescendants()) do
+	if ef:IsA("RemoteEvent") then
+		ef:FireServer("blud trying to skid my script LOL", "SKID", "L", "can't make roblox script? go learn lua dumbass")
+		wait(0.1)
+	elseif ef:IsA("RemoteFunction") then
+		ef:InvokeServer("blud trying to skid my script LOL", "SKID", "L", "can't make roblox script? go learn lua dumbass")
+		wait(0.1)
+	end
+end
+end
+end
