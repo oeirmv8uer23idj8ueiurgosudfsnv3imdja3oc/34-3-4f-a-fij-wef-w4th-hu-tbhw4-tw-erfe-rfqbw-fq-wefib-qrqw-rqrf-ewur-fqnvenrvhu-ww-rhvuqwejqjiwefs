@@ -45,7 +45,7 @@ local function safeskripz()
     if car == true then
         OrionLib:MakeNotification({
            Name = "Script Warning",
-           Content = "Car function still working or enabled if you wanna use another function please disable it",
+           Content = "Car function still working or enabled if you wanna use this function please disable it",
            Image = "rbxassetid://4483345998",
            Time = 5
        })
@@ -53,7 +53,7 @@ local function safeskripz()
        if duping == true then
         OrionLib:MakeNotification({
            Name = "Script Warning",
-           Content = "Dupe function still working or enabled if you wanna use another function please disable it",
+           Content = "Dupe function still working or enabled if you wanna use this function please disable it",
            Image = "rbxassetid://4483345998",
            Time = 5
        })
@@ -61,7 +61,7 @@ local function safeskripz()
        if trollinplr == true then 
         OrionLib:MakeNotification({
            Name = "Script Warning",
-           Content = "Troll Player function still working or enabled if you wanna use another function please disable it",
+           Content = "Troll Player function still working or enabled if you wanna use this function please disable it",
            Image = "rbxassetid://4483345998",
            Time = 5
        })
@@ -69,7 +69,7 @@ local function safeskripz()
        if shutdownserver == true then 
         OrionLib:MakeNotification({
            Name = "Script Warning",
-           Content = "Shutdown server still working or enabled if you wanna use another function please disable it",
+           Content = "Shutdown server still working or enabled if you wanna use this function please disable it",
            Image = "rbxassetid://4483345998",
            Time = 5
        })
@@ -77,7 +77,7 @@ local function safeskripz()
        if lagserver == true then 
         OrionLib:MakeNotification({
            Name = "Script Warning",
-           Content = "Lag server still working or enabled if you wanna use another function please disable it",
+           Content = "Lag server still working or enabled if you wanna use this function please disable it",
            Image = "rbxassetid://4483345998",
            Time = 5
        })
@@ -85,7 +85,7 @@ local function safeskripz()
        if lagplr == true then 
         OrionLib:MakeNotification({
            Name = "Script Warning",
-           Content = "Lag player function still working or enabled if you wanna use another function please disable it",
+           Content = "Lag player function still working or enabled if you wanna use this function please disable it",
            Image = "rbxassetid://4483345998",
            Time = 5
        })
@@ -93,7 +93,7 @@ local function safeskripz()
        if lagaura == true  then 
         OrionLib:MakeNotification({
            Name = "Script Warning",
-           Content = "Lag aura function still working or enabled if you wanna use another function please disable it",
+           Content = "Lag aura function still working or enabled if you wanna use this function please disable it",
            Image = "rbxassetid://4483345998",
            Time = 5
        })
@@ -101,7 +101,7 @@ local function safeskripz()
        if toolgrip == true then  
        OrionLib:MakeNotification({
            Name = "Script Warning",
-           Content = "Tool grip function still working or enabled if you wanna use another function please disable it",
+           Content = "Tool grip function still working or enabled if you wanna use this function please disable it",
            Image = "rbxassetid://4483345998",
            Time = 5
        })
@@ -109,7 +109,7 @@ local function safeskripz()
     if looptp == true then
         OrionLib:MakeNotification({
             Name = "Script Warning",
-            Content = "Loop teleport to player still enabled if you wanna use another function please disable it",
+            Content = "Loop teleport to player still enabled if you wanna use this function please disable it",
             Image = "rbxassetid://4483345998",
             Time = 5
         })
@@ -120,11 +120,30 @@ local function antifuncheck()
 	if antisit == true then  
 		OrionLib:MakeNotification({
 			Name = "Script Warning",
-			Content = "Anti sit still enabled if you wanna use another function please disable it",
+			Content = "Anti sit still enabled if you wanna use another this please disable it",
 			Image = "rbxassetid://4483345998",
 			Time = 5
 		})
 		 return end
+		 if antisirb2 == true then
+			OrionLib:MakeNotification({
+				Name = "Script Warning",
+				Content = "Anti sit V2 still enabled if you wanna use this function please disable it",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+			return end
+	end
+
+	local function antigodown()
+		if antigodown == true then
+			OrionLib:MakeNotification({
+				Name = "Script Warning",
+				Content = "Anti go down is enabled if you wanna use this function please disable it",
+				Image = "rbxassetid://4483345998",
+				Time = 5
+			})
+		end
 	end
 
 local	function GetRoot(plr)
@@ -274,6 +293,11 @@ tool:AddButton({
 		if toolthatiwanttodupe == "None" then return end
 		duping = true
 		oldcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			task.wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
+		wait(0.1)
 		if game:GetService("Workspace"):FindFirstChild("Camera") then
 			game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
 		for m=1,2 do task.wait()
@@ -367,7 +391,8 @@ tool:AddButton({
 				 game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe) == nil
 		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-		wait(8)
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") == nil
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
 		wait()
 		duping = false
@@ -399,6 +424,11 @@ OrionLib:MakeNotification({
 		oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		toolthatiwanttodupe = "FireX"
 		tools = "FireX"
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			task.wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
+		wait(0.1)
 		local args = {
 			[1] = "ClearAllTools"
 		}
@@ -433,7 +463,8 @@ OrionLib:MakeNotification({
 				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe) == nil
 		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-		wait(8)
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") == nil
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 		toolgrip = true
 		duping = false
 		wait()
@@ -778,6 +809,11 @@ tool:AddButton({
 		oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		toolthatiwanttodupe = "FireX"
 		tools = "FireX"
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			task.wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
+		wait(0.1)
 		local args = {
 			[1] = "ClearAllTools"
 		}
@@ -812,7 +848,8 @@ tool:AddButton({
 				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe) == nil
 		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-		wait(8)
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") == nil
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 		toolgrip = true
 		duping = false
 		wait()
@@ -978,6 +1015,11 @@ tool:AddButton({
 		oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		toolthatiwanttodupe = "FireX"
 		tools = "FireX"
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			task.wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
+		wait(0.1)
 		local args = {
 			[1] = "ClearAllTools"
 		}
@@ -1012,7 +1054,8 @@ tool:AddButton({
 				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe) == nil
 		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-		wait(8)
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") == nil
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 		toolgrip = true
 		duping = false
 		wait()
@@ -1522,6 +1565,11 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 10
 })
+if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+	task.wait()
+	game.Players.LocalPlayer.Character.Humanoid.Sit = false
+end
+wait(0.1)
 		nametools = "long box lel"
 		oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		toolthatiwanttodupe = "Box"
@@ -1560,7 +1608,8 @@ OrionLib:MakeNotification({
 				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe) == nil
 		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-		wait(8.5)
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") == nil
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 		toolgrip = true
 		duping = false
 		wait()
@@ -2012,6 +2061,11 @@ tool:AddButton({
 		oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		toolthatiwanttodupe = "Box"
 		tools = "Box"
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			task.wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
+		wait(0.1)
 		local args = {
 			[1] = "ClearAllTools"
 		}
@@ -2046,7 +2100,8 @@ tool:AddButton({
 				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe) == nil
 		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-		wait(8)
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") == nil
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 		toolgrip = true
 		duping = false
 		wait()
@@ -2222,6 +2277,11 @@ tool:AddButton({
 		oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		toolthatiwanttodupe = "Crystal"
 		tools = "Crystal"
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			task.wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
+		wait(0.1)
 		local args = {
 			[1] = "ClearAllTools"
 		}
@@ -2256,7 +2316,8 @@ tool:AddButton({
 				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild(toolthatiwanttodupe) == nil
 		end
 		game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-		wait(8)
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") == nil
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 		toolgrip = true
 		duping = false
 		wait()
@@ -2490,7 +2551,6 @@ trol:AddButton({
 	Name = "Start troll function!",
 	Callback = function()
 		safeskripz()
-		if selected == nil then return end
 		if selected == "" or method == "" or trolmethod == "" then return end
 		if selected.Character.Humanoid.Sit then 
 			OrionLib:MakeNotification({
@@ -2503,6 +2563,10 @@ trol:AddButton({
 		oldcframe = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 		otherplrcf = selected.Character.HumanoidRootPart.CFrame
 		trollinplr = true
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			task.wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
 		if method == "Couch" then
             for awd,czx in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
             if czx.name == "Couch" then
@@ -2955,7 +3019,7 @@ end
 	elseif trolmethod == "Fling" then
 		local FLINGED = Instance.new("BodyThrust") FLINGED.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart FLINGED.Force = Vector3.new(10000, 0, -10000) FLINGED.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 		game.Players.LocalPlayer.Character.Head:Destroy()
-		wait(8)
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("Head")
 		local args = {
 			[1] = "PlayerWantsToDeleteTool",
 			[2] = "Couch"
@@ -3298,9 +3362,9 @@ end
 		wait(0.25)
 		trollinplr = false
 	elseif trolmethod == "Fling" then
-		local FLINGED = Instance.new("BodyThrust") FLINGED.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart FLINGED.Force = Vector3.new(10000, 0, 10000) FLINGED.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		local FLINGED = Instance.new("BodyThrust") FLINGED.Parent = game.Players.LocalPlayer.Character.UpperTorso FLINGED.Force = Vector3.new(10000, 0, 10000) FLINGED.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
 		game.Players.LocalPlayer.Character.Head:Destroy()
-		wait(8)
+		repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild("Head")
 		local args = {
 			[1] = "PlayerWantsToDeleteTool",
 			[2] = "ShoppingCart"
@@ -3351,6 +3415,304 @@ trol:AddToggle({
 		end
 	end    
 })
+
+local Section = trol:AddSection({
+	Name = "Car Troll Function"
+})
+
+trol:AddDropdown({
+	Name = "Select Troll",
+	Default = "None",
+	Options = {"None", "Annoy Player" , "Float Player", "Make The Player Go Under Map"},
+	Callback = function(aawdacxxxz)
+		carmetodselect = aawdacxxxz
+	end    
+})
+
+trol:AddButton({
+	Name = "Start Trolling Player",
+	Callback = function()
+		safeskripz()
+		antifuncheck()
+		oldcf = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		car = true
+		if carmetodselect == "None" or selected == "" then return end
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			task.wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
+		wait(0.1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-598.856628, 3.94226718, -480.514252, -0.0779116824, -1.75436976e-09, -0.996960282, -3.61167252e-09, 1, -1.47746948e-09, 0.996960282, 3.48558182e-09, -0.0779116824)
+		wait(0.5)
+		if carmetodselect == "Annoy Player" then
+			local args = {
+				[1] = "PickingCar",
+				[2] = "TowTruck"
+			}
+			
+			carremote:FireServer(unpack(args))
+			wait(1.5)
+			repeat
+				for mewfa,wefuh in pairs(game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"]:GetDescendants()) do
+					if wefuh:IsA("VehicleSeat") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = wefuh.CFrame
+					end
+				end
+				wait()
+			until
+			game.Players.LocalPlayer.Character.Humanoid.Sit == true 
+			wait(0.25)
+			annoyinhhh = true
+			while annoyinhhh == true do 
+				if annoyinhhh == false then
+					local args = {
+						[1] = "PickingCar",
+						[2] = "DeleteAllVehicles"
+					}
+					
+					carremote:FireServer(unpack(args))
+					wait(1.5)
+					if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+						task.wait()
+						game.Players.LocalPlayer.Character.Humanoid.Sit = false
+					end
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
+					car = false
+				end
+				if game.Players.LocalPlayer.Character.Humanoid.Sit == false then
+					repeat
+						for mewfa,wefuh in pairs(game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"]:GetDescendants()) do
+							if wefuh:IsA("VehicleSeat") then
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = wefuh.CFrame
+							end
+						end
+						wait()
+					until
+					game.Players.LocalPlayer.Character.Humanoid.Sit == true 
+				end
+				if selected.Character:FindFirstChild("HumanoidRootPart") == nil then
+					repeat wait() until selected.Character:FindFirstChild("HumanoidRootPart") end
+				if selected.Character:FindFirstChild("HumanoidRootPart").CFrame.Y <= -100 or selected.Character:FindFirstChild("Humanoid").Health == 0  then
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(-598.856628, 4.5, -480.514252, -0.0779116824, -1.75436976e-09, -0.996960282, -3.61167252e-09, 1, -1.47746948e-09, 0.996960282, 3.48558182e-09, -0.0779116824)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.Anchored = true
+					task.wait()
+				else
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.Anchored = false
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.HumanoidRootPart.CFrame.X,selected.Character.HumanoidRootPart.CFrame.Y,selected.Character.HumanoidRootPart.CFrame.Z) * CFrame.new(2,-3,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.HumanoidRootPart.CFrame.X,selected.Character.HumanoidRootPart.CFrame.Y,selected.Character.HumanoidRootPart.CFrame.Z) * CFrame.new(2,-6,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.HumanoidRootPart.CFrame.X,selected.Character.HumanoidRootPart.CFrame.Y,selected.Character.HumanoidRootPart.CFrame.Z) * CFrame.new(2,-5,-12.5)
+				task.wait()
+				end
+			end
+		elseif carmetodselect == "Float Player" then
+		local args = {
+			[1] = "PickingCar",
+			[2] = "TowTruck"
+		}
+		
+		carremote:FireServer(unpack(args))
+		wait(1.5)
+		repeat
+			for mewfa,wefuh in pairs(game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"]:GetDescendants()) do
+				if wefuh:IsA("VehicleSeat") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = wefuh.CFrame
+				end
+			end
+			wait()
+		until
+		game.Players.LocalPlayer.Character.Humanoid.Sit == true 
+		wait(0.25)
+		annoyinhhh = true
+		while annoyinhhh == true do 
+			if annoyinhhh == false then
+				local args = {
+					[1] = "PickingCar",
+					[2] = "DeleteAllVehicles"
+				}
+				
+				carremote:FireServer(unpack(args))
+				wait(1.5)
+				if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+					task.wait()
+					game.Players.LocalPlayer.Character.Humanoid.Sit = false
+				end
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
+				wait(0.1)
+				car = false
+			end
+			if game.Players.LocalPlayer.Character.Humanoid.Sit == false then
+				repeat
+					for mewfa,wefuh in pairs(game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"]:GetDescendants()) do
+						if wefuh:IsA("VehicleSeat") then
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = wefuh.CFrame
+						end
+					end
+					wait()
+				until
+				game.Players.LocalPlayer.Character.Humanoid.Sit == true 
+			end
+			if selected.Character:FindFirstChild("HumanoidRootPart") == nil then
+				repeat wait() until selected.Character:FindFirstChild("HumanoidRootPart") end
+			if selected.Character:FindFirstChild("HumanoidRootPart").CFrame.Y <= -100 or selected.Character:FindFirstChild("Humanoid").Health == 0  then
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(-598.856628, 4.5, -480.514252, -0.0779116824, -1.75436976e-09, -0.996960282, -3.61167252e-09, 1, -1.47746948e-09, 0.996960282, 3.48558182e-09, -0.0779116824)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.Anchored = true
+				task.wait()
+			else
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.Anchored = false
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-4,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-3.5,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-3,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-2.5,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-2,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-1.5,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-1,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,0.5,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,0,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,1,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,1.5,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,2,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,2.5,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,3,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,3.5,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,4,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,4.5,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,5,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,5.5,-12.5)
+				task.wait()
+				game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,6,-12.5)
+				task.wait()
+			end
+		end
+		elseif carmetodselect == "Make The Player Go Under Map" then
+			local args = {
+				[1] = "PickingCar",
+				[2] = "TowTruck"
+			}
+			
+			carremote:FireServer(unpack(args))
+			wait(1.5)
+			repeat
+				for mewfa,wefuh in pairs(game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"]:GetDescendants()) do
+					if wefuh:IsA("VehicleSeat") then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = wefuh.CFrame
+					end
+				end
+				wait()
+			until
+			game.Players.LocalPlayer.Character.Humanoid.Sit == true 
+			wait(0.25)
+			annoyinhhh = true
+			while annoyinhhh == true do 
+				if annoyinhhh == false then
+					local args = {
+						[1] = "PickingCar",
+						[2] = "DeleteAllVehicles"
+					}
+					
+					carremote:FireServer(unpack(args))
+					wait(1.5)
+					if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+						task.wait()
+						game.Players.LocalPlayer.Character.Humanoid.Sit = false
+					end
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldcf
+					car = false
+				end
+				if game.Players.LocalPlayer.Character.Humanoid.Sit == false then
+					repeat
+						for mewfa,wefuh in pairs(game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"]:GetDescendants()) do
+							if wefuh:IsA("VehicleSeat") then
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = wefuh.CFrame
+							end
+						end
+						wait()
+					until
+					game.Players.LocalPlayer.Character.Humanoid.Sit == true 
+				end
+				if selected.Character:FindFirstChild("HumanoidRootPart") == nil then
+					repeat wait() until selected.Character:FindFirstChild("HumanoidRootPart") end
+				if selected.Character:FindFirstChild("HumanoidRootPart").CFrame.Y <= -100 or selected.Character:FindFirstChild("Humanoid").Health == 0  then
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(-598.856628, 4.5, -480.514252, -0.0779116824, -1.75436976e-09, -0.996960282, -3.61167252e-09, 1, -1.47746948e-09, 0.996960282, 3.48558182e-09, -0.0779116824)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.Anchored = true
+					task.wait()
+				else
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.Anchored = false
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,3.5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,3,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,2.5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,2,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,1.5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,1,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,0.5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,0,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-0.5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-1,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-1.5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-2,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-2.5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-3,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-3.5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-4,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-4.5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-5.5,-12.5)
+					task.wait()
+					game.workspace.Vehicles[game.Players.LocalPlayer.Name.."Car"].Chassis.Mass.CFrame = CFrame.new(selected.Character.Head.CFrame.X,selected.Character.Head.CFrame.Y,selected.Character.Head.CFrame.Z) * CFrame.new(-2,-6,-12.5)
+					task.wait()
+				end
+			end
+		end
+  	end    
+})
+
+trol:AddButton({
+	Name = "Stop Car Function",
+	Callback = function()
+		annoyinhhh = false
+  	end    
+})
+
 
 local Section = admin:AddSection({
 	Name = "Troll Admin Commands"
@@ -3442,6 +3804,10 @@ admin:AddButton({
 		safeskripz()
 		tools = "FireX"
 		lagserver = true
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			task.wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
 		if game:GetService("Workspace"):FindFirstChild("Camera") then
 			game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
 			wait(0.1)
@@ -3482,6 +3848,10 @@ admin:AddButton({
 		safeskripz()
 		tools = "FireX"
 		shutdownserver = true
+		if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+			task.wait()
+			game.Players.LocalPlayer.Character.Humanoid.Sit = false
+		end
 		if game:GetService("Workspace"):FindFirstChild("Camera") then
 			game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
 			wait(0.1)
@@ -3827,6 +4197,19 @@ anti:AddToggle({
 	end    
 })
 
+anti:AddToggle({
+	Name = "Anti Sit V2",
+	Default = false,
+	Callback = function(woiufwiuefhiufwehi)
+		antisirb2 = woiufwiuefhiufwehi
+		while antisirb2 == true do task.wait()
+			if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+				task.wait() game.Players.LocalPlayer.Character.Humanoid.Sit = false
+			end
+		end
+	end
+})
+
 local Section = anti:AddSection({
 	Name = "Anti Lag Functions"
 })
@@ -3906,6 +4289,23 @@ game:GetService("Players").LocalPlayer.DescendantAdded:Connect(
         antilagselflel(ttrbbtrbtrrynrn)
     end)
 end
+	end
+})
+
+local Section = anti:AddSection({
+	Name = "Another Anti Function"
+})
+
+anti:AddToggle({
+	Name = "Anti Go Down Map",
+	Default = false,
+	Callback = function(rgergsdcsdc)
+		antigodown = rgergsdcsdc
+		while antigodown == true do task.wait()
+			if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y <= -200 then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X,100,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
+			end
+		end
 	end
 })
 
@@ -4479,6 +4879,10 @@ anti:AddToggle({
 			end
 			return 
 		elseif antisit == true then
+			if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+				task.wait()
+				game.Players.LocalPlayer.Character.Humanoid.Sit = false
+			end
 			for sitpart,allsitpart in pairs(game.workspace:GetDescendants()) do
 				if allsitpart:IsA("Seat") or allsitpart:IsA("VehicleSeat") then
 					if allsitpart.Disabled == false then
@@ -4499,6 +4903,19 @@ anti:AddToggle({
 				asdawdsccxxc(allsitparttt)
 			end)
 	end    
+})
+
+anti:AddToggle({
+	Name = "Anti Sit V2",
+	Default = false,
+	Callback = function(woiufwiuefhiufwehi)
+		antisirb2 = woiufwiuefhiufwehi
+		while antisirb2 == true do task.wait()
+			if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+				task.wait() game.Players.LocalPlayer.Character.Humanoid.Sit = false
+			end
+		end
+	end
 })
 
 local Section = anti:AddSection({
