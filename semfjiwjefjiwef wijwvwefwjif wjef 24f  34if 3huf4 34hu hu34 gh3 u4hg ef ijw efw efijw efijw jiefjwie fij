@@ -347,6 +347,7 @@ tool:AddButton({
 							toollel.Parent = game.Players.LocalPlayer.Backpack
 						toollel.Parent = game.Players.LocalPlayer.Character
 						tollllahhhh = toollel
+						task.wait()
 					end
 				end
 			else toollllfoun2 = false
@@ -379,6 +380,7 @@ tool:AddButton({
 			repeat wait() until game.Players.LocalPlayer.Character:FindFirstChild(tollllahhhh) == nil
 			toollllfoun2 = false
 		end
+		wait()
 		for m=1, siryessir do
 			if duping == false then game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false return end
 			if game:GetService("Workspace"):FindFirstChild("Camera") then
@@ -3725,7 +3727,7 @@ admin:AddButton({
 			[7] = 0,
 			[8] = 0,
 			[9] = {
-				[1] = true
+				[1] = false
 			},
 			[10] = {
 				[1] = 0,
@@ -3736,11 +3738,89 @@ admin:AddButton({
 				[6] = 0
 			},
 			[11] = true,
-			[12] = true
+			[12] = false
 		}
 		
 		gunremote:FireServer(unpack(args))
   	end    
+})
+
+admin:AddButton({
+	Name = "Fling All Player That Have A Gun",
+	Callback = function()
+		for m,v in pairs(game:GetService("Players"):GetPlayers()) do
+			if v.Name == game.Players.LocalPlayer.Name == false then
+				for mad,wef in pairs(v.Character:GetChildren()) do
+					if wef:IsA("Tool") then
+						if wef.Name == "Sniper" or wef.Name == "Assault" or wef.Name == "Shotgun" or wef.Name == "GlockBrown" or  wef.Name == "Glock" then
+			local args = {
+				[1] = wef.Handle,
+				[2] = wef.Handle,
+				[3] = Vector3.new(math.random(999999999,99999999999999), math.random(999999999,99999999999999), math.random(999999999,99999999999999)),
+				[4] = Vector3.new(math.random(999999999,99999999999999), math.random(999999999,99999999999999), math.random(999999999,99999999999999)),
+				[5] = wef.GunScript_Local.MuzzleEffect,
+				[6] = wef.GunScript_Local.HitEffect,
+				[7] = 0,
+				[8] = 9110129480,
+				[9] = {
+					[1] = false
+				},
+				[10] = {
+					[1] = 0,
+					[2] = Vector3.new(999999999999,999999999999,9999999999),
+					[3] = BrickColor.new(0),
+					[4] = 0,
+					[5] = Enum.Material.SmoothPlastic,
+					[6] = 0
+				},
+				[11] = true,
+				[12] = false
+			}
+			
+			gunremote:FireServer(unpack(args))
+			wait(0.25)
+		end
+	end
+end
+		end
+  	end    
+for m,v in pairs(game:GetService("Players"):GetPlayers()) do
+		if v.Name == game.Players.LocalPlayer.Name == false then
+			for mad,wef in pairs(v.Backpack:GetChildren()) do
+				if wef:IsA("Tool") then
+					if wef.Name == "Sniper" or wef.Name == "Assault" or wef.Name == "Shotgun" or wef.Name == "GlockBrown" or  wef.Name == "Glock" then
+		local args = {
+			[1] = wef.Handle,
+			[2] = wef.Handle,
+			[3] = Vector3.new(math.random(999999999,99999999999999), math.random(999999999,99999999999999), math.random(999999999,99999999999999)),
+			[4] = Vector3.new(math.random(999999999,99999999999999), math.random(999999999,99999999999999), math.random(999999999,99999999999999)),
+			[5] = wef.GunScript_Local.MuzzleEffect,
+			[6] = wef.GunScript_Local.HitEffect,
+			[7] = 0,
+			[8] = 9110129480,
+			[9] = {
+				[1] = false
+			},
+			[10] = {
+				[1] = 25,
+				[2] = Vector3.new(0.25, 0.25, 100),
+				[3] = BrickColor.new(24),
+				[4] = 0.25,
+				[5] = Enum.Material.SmoothPlastic,
+				[6] = 0.25
+			},
+			[11] = true,
+			[12] = false
+		}
+		
+		gunremote:FireServer(unpack(args))
+		wait(0.25)
+	end
+end
+end
+	end
+  end    
+end
 })
 
 admin:AddButton({
@@ -3758,7 +3838,7 @@ admin:AddButton({
 				[7] = 0,
 				[8] = 0,
 				[9] = {
-					[1] = true
+					[1] = false
 				},
 				[10] = {
 					[1] = 0,
@@ -3769,7 +3849,7 @@ admin:AddButton({
 					[6] = 0
 				},
 				[11] = true,
-				[12] = true
+				[12] = false
 			}
 			
 			gunremote:FireServer(unpack(args))
