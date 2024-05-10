@@ -4290,8 +4290,10 @@ anti:AddToggle({
 				if yeikfs:IsA("Tool") then
 					if yeikfs.Name == "FireX" or yeikfs.Name == "Box" then
 						for afvvz,awdvvm in pairs(yeikfs:GetDescendants()) do
-							if awdvvm:IsA("Part") or awdvvm:IsA("MeshPart") or awdvvm:IsA("BasePart") then
+							if awdvvm:IsA("Part") then
+								if awdvvm.Name == "Handle" == false then
 								awdvvm:Destroy()
+								end
 							end
 						end
 					end
@@ -4302,8 +4304,10 @@ anti:AddToggle({
 			if fgnfgnngfnxvx:IsA("Tool") then
 				if fgnfgnngfnxvx.Name == "FireX" or fgnfgnngfnxvx.Name == "Box" then
 					for afvvz,awdvvm in pairs(fgnfgnngfnxvx:GetDescendants()) do
-						if awdvvm:IsA("Part") or awdvvm:IsA("MeshPart") or awdvvm:IsA("BasePart") then
-							awdvvm:Destroy()
+						if awdvvm:IsA("Part") then
+							if awdvvm.Name == "Handle" then
+								awdvvm:Destroy()
+							end
 						end
 					end
 				end
@@ -4327,7 +4331,7 @@ for iwjwf,udhf in pairs(game.Players.LocalPlayer:GetDescendants()) do
     if udhf:IsA("Tool") then
         if udhf.Name == "long firex lel" or udhf.Name == "long box lel" or udhf.Name == "firex wall lel" or udhf.Name == "lag plr lel" then
             for efnasd,erugeurg in pairs(udhf:GetDescendants()) do
-                if erugeurg:IsA("Part") or erugeurg:IsA("MeshPart") or erugeurg:IsA("BasePart") then
+                if erugeurg:IsA("Part") then
                     if erugeurg.Name == "Handle" == false then
                         erugeurg:Destroy()
                     end
@@ -4340,7 +4344,7 @@ local function antilagselflel(ttrbbtrbtrrynrn)
     if ttrbbtrbtrrynrn:IsA("Tool") then
         if ttrbbtrbtrrynrn.Name == "long firex lel" or ttrbbtrbtrrynrn.Name == "long box lel" or ttrbbtrbtrrynrn.Name == "firex wall lel" or ttrbbtrbtrrynrn.Name == "lag plr lel" then
             for efnasd,erugeurg in pairs(ttrbbtrbtrrynrn:GetDescendants()) do
-                if erugeurg:IsA("Part") or erugeurg:IsA("MeshPart") or erugeurg:IsA("BasePart") then
+                if erugeurg:IsA("Part") then
                     if erugeurg.Name == "Handle" == false then
                         erugeurg:Destroy()
                     end
@@ -5192,7 +5196,9 @@ while true do task.wait()
 if antiskidweofkwokfasidiabwrrjjjnnnmf0rtuit0ushubantiskidloldasjdjwjdjajsewhgh == true then
 for asd,ef in pairs(game.ReplicatedStorage:GetDescendants()) do
 	if ef:IsA("RemoteEvent") then
-		ef:FireServer("blud trying to skid my script LOL", "SKID", "L", "can't make roblox script? go learn lua dumbass")
+		if ef.Name == "1Gu1nSound1s" == false or ef.Name == "1Gu1n" == false then
+			ef:FireServer("blud trying to skid my script LOL", "SKID", "L", "can't make roblox script? go learn lua dumbass")
+		end
 		wait(0.1)
 	elseif ef:IsA("RemoteFunction") then
 		ef:InvokeServer("blud trying to skid my script LOL", "SKID", "L", "can't make roblox script? go learn lua dumbass")
