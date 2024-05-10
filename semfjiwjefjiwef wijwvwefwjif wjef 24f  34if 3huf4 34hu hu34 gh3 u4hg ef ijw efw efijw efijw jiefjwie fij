@@ -1046,7 +1046,7 @@ tool:AddButton({
 			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 		wait(0.3)
 		duping = true
-		for m=1, 71 do
+		for m=1, 276 do
 			if duping == false then game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false return end
 			if game:GetService("Workspace"):FindFirstChild("Camera") then
 				game:GetService("Workspace"):FindFirstChild("Camera"):Destroy() end
